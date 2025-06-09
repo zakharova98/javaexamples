@@ -29,9 +29,26 @@ public class Main {
 
         ArithmeticOperations arithmeticOperations = new ArithmeticOperations();
         //arithmeticOperations.demonstrateOperation(30, 13);
+        //arithmeticOperations.demonstrateIncrementOperation(10);
+        //arithmeticOperations.demonstrateDecrementOperation(55);
 
-        arithmeticOperations.demonstrateIncrementOperation(10);
-        arithmeticOperations.demonstrateDecrementOperation(55);
+        Operators operators = new Operators();
+        //operators.ifOperatorExample();
+        //operators.switchOperatorExample(2);
+        //operators.switchOperatorExampleMonth(7);
+        //operators.whileOperatorExample();
+        //operators.doWhileOperatorExample();
+        //operators.forOperatorExample();
+        //System.out.println("----");
+        //operators.forOperatorExample2();
+        //operators.forEachOperatorExample();
+        //operators.forOperatorExampleForArray();
+        //operators.breakOperatorExample();
+        //operators.breakOperatorGoToExample();
+        //operators.continueOperatorForExample();
+        //operators.continueOperatorWhileExample();
+        //operators.continueOperatorGoToExample();
+        operators.returnOperatorExample();
 
 
 

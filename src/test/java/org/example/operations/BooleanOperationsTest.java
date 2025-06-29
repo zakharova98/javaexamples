@@ -91,7 +91,7 @@ public class BooleanOperationsTest extends TestCase {
     public void testTernaryOperation() {
         int randomValue = new Random().nextInt(1000);
 
-        String result = (randomValue % 2 == 0) ? "it is odd value" : "it is even value";
+        String result = (randomValue % 2 == 0) ? "it is even value" : "it is odd value";
         System.out.println("value is " + randomValue + ", result = " + result);
     }
 }

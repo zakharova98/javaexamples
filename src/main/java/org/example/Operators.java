@@ -13,14 +13,14 @@ public class Operators {
 
         System.out.println("Random value = " + randomValue);
         if (mod == 0) {
-            System.out.println("it is odd value");
+            System.out.println("it is even value");
             if (randomValue % 10 == 2) { // число делится на 2, если его последняя цифра делится на 2
                 System.out.println("the number is divisible by 2");
             }
         } else if (randomValue % 10 == 5) { // здесь нечетное число делится на 5, если последняя цифра делится на 5
-            System.out.println("it is even value and divisible by 5");
+            System.out.println("it is odd value and divisible by 5");
         } else {
-            System.out.println("it is even value");
+            System.out.println("it is odd value");
         }
     }
 

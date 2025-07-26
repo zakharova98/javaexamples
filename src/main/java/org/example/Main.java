@@ -1,6 +1,7 @@
 package org.example;
 
 
+import org.example.classes.collections.StringExamples;
 import org.example.operations.ArithmeticOperations;
 import org.example.types.ArraysExample;
 import org.example.types.TypesExamples;
@@ -48,10 +49,15 @@ public class Main {
         //operators.continueOperatorForExample();
         //operators.continueOperatorWhileExample();
         //operators.continueOperatorGoToExample();
-        operators.returnOperatorExample();
+        //operators.returnOperatorExample();
 
-
-
+        StringExamples stringExamples = new StringExamples();
+        //stringExamples.creationExample();
+        //stringExamples.equalsExample();
+        //stringExamples.compareToExample();
+        //stringExamples.searchExample();
+        //stringExamples.modificationExample();
+        stringExamples.stringBuilderExample();
     }
 
 

@@ -1,7 +1,10 @@
 package org.example;
 
 
-import org.example.classes.collections.StringExamples;
+import org.example.classes.generics.GenDemo;
+import org.example.collections.IteratorExample;
+import org.example.collections.CollectionsExamples;
+import org.example.collections.StringExamples;
 import org.example.operations.ArithmeticOperations;
 import org.example.types.ArraysExample;
 import org.example.types.TypesExamples;
@@ -57,7 +60,31 @@ public class Main {
         //stringExamples.compareToExample();
         //stringExamples.searchExample();
         //stringExamples.modificationExample();
-        stringExamples.stringBuilderExample();
+        //stringExamples.stringBuilderExample();
+
+        IteratorExample iteratorExample = new IteratorExample();
+        //iteratorExample.iteratorDemo();
+
+        CollectionsExamples collectionsExamples = new CollectionsExamples();
+        //collectionsExamples.arrayListDemo();
+        //collectionsExamples.linkedListDemo();
+        //collectionsExamples.hashSetDemo();
+        //collectionsExamples.linkedHashSetDemo();
+        //collectionsExamples.treeSetDemo();
+        //collectionsExamples.priorityQueueDemo();
+        //collectionsExamples.arrayDequeDemo();
+        //collectionsExamples.hashMapDemo();
+        //collectionsExamples.treeMapDemo();
+        //collectionsExamples.linkedHashMapDemo();
+        //collectionsExamples.enumMapDemo();
+        //collectionsExamples.enumDemo();
+        //collectionsExamples.comparatorDemo();
+        //collectionsExamples.arraysMethodsDemo();
+        //collectionsExamples.propertiesDemo();
+
+        GenDemo genDemo = new GenDemo();
+        genDemo.genericsDemo();
+
     }
 
 

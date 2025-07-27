@@ -1,4 +1,4 @@
-package org.example.classes.collections;
+package org.example.collections;
 
 public class StringExamples {
 

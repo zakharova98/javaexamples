@@ -1,5 +1,6 @@
 package org.example.classes.collections;
 
+import org.example.collections.StringExamples;
 import org.junit.Assert;
 import org.junit.Test;
 

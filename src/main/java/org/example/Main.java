@@ -5,14 +5,17 @@ import org.example.classes.generics.GenDemo;
 import org.example.collections.IteratorExample;
 import org.example.collections.CollectionsExamples;
 import org.example.collections.StringExamples;
+import org.example.io.IOExamples;
 import org.example.operations.ArithmeticOperations;
 import org.example.types.ArraysExample;
 import org.example.types.TypesExamples;
 
+import java.io.IOException;
+
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("Hello and welcome!\n");
 
         TypesExamples typesExamples = new TypesExamples();
@@ -83,7 +86,16 @@ public class Main {
         //collectionsExamples.propertiesDemo();
 
         GenDemo genDemo = new GenDemo();
-        genDemo.genericsDemo();
+        //genDemo.genericsDemo();
+
+        IOExamples ioExamples = new IOExamples();
+        //ioExamples.consoleReaderExample();
+        //ioExamples.consoleReaderStringsExample();
+        //ioExamples.fileReaderExample();
+        //ioExamples.fileReaderTryWithResourcesExample();
+        //ioExamples.fileWriterExample();
+        //ioExamples.fileClassDemo();
+        ioExamples.serializableExampleDemo();
 
     }
 

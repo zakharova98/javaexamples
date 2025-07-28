@@ -1,12 +1,14 @@
 package org.example.classes;
 
-public class Box {
+import java.io.Serializable;
+
+public class Box implements Serializable {
 
     private double width;
     private double height;
     private double depth;
 
-    protected String name;
+    protected transient String name;
 
     public Box() {
         this.width = 0.0;
@@ -26,6 +28,13 @@ public class Box {
         this.width = width;
         this.height = height;
         this.depth = depth;
+    }
+
+    public Box(double width, double height, double depth, String name) {
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
+        this.name = name;
     }
 
     public double getWidth() {

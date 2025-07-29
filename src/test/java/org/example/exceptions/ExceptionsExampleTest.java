@@ -1,8 +1,8 @@
 package org.example.exceptions;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class ExceptionsExampleTest  {
 
@@ -15,7 +15,7 @@ public class ExceptionsExampleTest  {
 
     @Test
     public void testNestedCaughtException() {
-        Assert.assertThrows(ArithmeticException.class, () -> {
+        Assertions.assertThrows(ArithmeticException.class, () -> {
             exceptionsExample.nestedCaughtException(0);
         });
 
@@ -25,7 +25,7 @@ public class ExceptionsExampleTest  {
 
     @Test
     public void testThrowExceptionExample() throws Exception {
-        Assert.assertThrows(Exception.class, () -> {
+        Assertions.assertThrows(Exception.class, () -> {
             exceptionsExample.throwExceptionExample(201);
         });
 
@@ -36,7 +36,7 @@ public class ExceptionsExampleTest  {
     public void testUncheckedExceptionExample() {
         exceptionsExample.uncheckedExceptionExample(1);
 
-        Assert.assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
+        Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
             exceptionsExample.uncheckedExceptionExample(200);
         });
     }
@@ -44,7 +44,7 @@ public class ExceptionsExampleTest  {
     @Test
     public void testMyExceptionExample() {
 
-        Assert.assertThrows(MyException.class, () -> {
+        Assertions.assertThrows(MyException.class, () -> {
             exceptionsExample.myExceptionExample(200);
         });
 

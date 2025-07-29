@@ -1,7 +1,7 @@
 package org.example.operations;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 
 public class ArithmeticOperationsTest {
@@ -15,7 +15,7 @@ public class ArithmeticOperationsTest {
 
         int expectedSum = 15;
         int actualSum = arithmeticOperations.sum(first, second);
-        Assert.assertEquals(expectedSum, actualSum);
+        Assertions.assertEquals(expectedSum, actualSum);
     }
 
     @Test
@@ -25,7 +25,7 @@ public class ArithmeticOperationsTest {
 
         int expectedDif = 5;
         int actualDif = arithmeticOperations.difference(first, second);
-        Assert.assertEquals(expectedDif, actualDif);
+        Assertions.assertEquals(expectedDif, actualDif);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class ArithmeticOperationsTest {
 
         int expectedMul = 50;
         int actualMul = arithmeticOperations.multiplication(first, second);
-        Assert.assertEquals(expectedMul, actualMul);
+        Assertions.assertEquals(expectedMul, actualMul);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class ArithmeticOperationsTest {
 
         int expectedDiv = 2;
         int actualDiv = arithmeticOperations.division(first, second);
-        Assert.assertEquals(expectedDiv, actualDiv);
+        Assertions.assertEquals(expectedDiv, actualDiv);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class ArithmeticOperationsTest {
 
         int expectedMod = 2;
         int actualMod = arithmeticOperations.mod(first, second);
-        Assert.assertEquals(expectedMod, actualMod);
+        Assertions.assertEquals(expectedMod, actualMod);
     }
 
     @Test
@@ -66,6 +66,6 @@ public class ArithmeticOperationsTest {
 
         double expectedMod = 2.25;
         double actualMod = arithmeticOperations.mod(first, second);
-        Assert.assertEquals(expectedMod, actualMod, 0.0);
+        Assertions.assertEquals(expectedMod, actualMod, 0.0);
     }
 }

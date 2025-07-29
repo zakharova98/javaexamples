@@ -1,8 +1,9 @@
 package org.example.classes.inheritance;
 
 import org.example.classes.Box;
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class AnimalTest {
 
@@ -12,11 +13,11 @@ public class AnimalTest {
 
         dog.bark();
         dog.eat(); // наследованный метод от класса Animal
-        Assert.assertEquals(0, dog.getAge());
-        Assert.assertNull(dog.getBreed());
-        Assert.assertNull(dog.getName());
-        Assert.assertNull(dog.getColor());
-        Assert.assertEquals(0, dog.getWeight());
+        Assertions.assertEquals(0, dog.getAge());
+        Assertions.assertNull(dog.getBreed());
+        Assertions.assertNull(dog.getName());
+        Assertions.assertNull(dog.getColor());
+        Assertions.assertEquals(0, dog.getWeight());
 
         System.out.println("\n");
 
@@ -24,11 +25,11 @@ public class AnimalTest {
         dogOllie.bark();
         dogOllie.eat();
 
-        Assert.assertEquals(5, dogOllie.getAge());
-        Assert.assertEquals("Collie", dogOllie.getBreed());
-        Assert.assertEquals("Ollie", dogOllie.getName());
-        Assert.assertEquals("gray", dogOllie.getColor());
-        Assert.assertEquals(15, dogOllie.getWeight());
+        Assertions.assertEquals(5, dogOllie.getAge());
+        Assertions.assertEquals("Collie", dogOllie.getBreed());
+        Assertions.assertEquals("Ollie", dogOllie.getName());
+        Assertions.assertEquals("gray", dogOllie.getColor());
+        Assertions.assertEquals(15, dogOllie.getWeight());
 
     }
 

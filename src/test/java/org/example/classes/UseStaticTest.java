@@ -1,18 +1,17 @@
 package org.example.classes;
 
-import junit.framework.TestCase;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
-public class UseStaticTest extends TestCase {
+public class UseStaticTest {
 
     @Test
     public void useStaticClassTest() {
         System.out.println("Test for UseStatic class");
         UseStatic.print();
 
-        Assert.assertEquals(3, UseStatic.a);
-        Assert.assertEquals(15, UseStatic.b);
+        Assertions.assertEquals(3, UseStatic.a);
+        Assertions.assertEquals(15, UseStatic.b);
     }
 
 }

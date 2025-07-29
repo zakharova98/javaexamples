@@ -1,6 +1,6 @@
 package org.example.classes.abstractExm;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class AbstractTest {
 

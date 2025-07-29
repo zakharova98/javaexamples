@@ -1,12 +1,11 @@
 package org.example.operations;
 
-import junit.framework.TestCase;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.Random;
 
-public class BooleanOperationsTest extends TestCase {
+public class BooleanOperationsTest {
 
     BooleanOperations booleanOperations = new BooleanOperations();
 
@@ -18,17 +17,17 @@ public class BooleanOperationsTest extends TestCase {
 
         boolean expected = true;
         boolean actual = booleanOperations.andOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
         second = false;
         expected = false;
         actual = booleanOperations.andOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
         first = false;
         expected = false;
         actual = booleanOperations.andOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -39,17 +38,17 @@ public class BooleanOperationsTest extends TestCase {
 
         boolean expected = true;
         boolean actual = booleanOperations.orOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
         second = false;
         expected = true;
         actual = booleanOperations.orOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
         first = false;
         expected = false;
         actual = booleanOperations.orOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -60,18 +59,18 @@ public class BooleanOperationsTest extends TestCase {
 
         boolean expected = true;
         boolean actual = booleanOperations.xorOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
         second = false;
         expected = true;
         actual = booleanOperations.xorOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
 
         first = false;
         expected = false;
         actual = booleanOperations.xorOperation(first, second);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -80,11 +79,11 @@ public class BooleanOperationsTest extends TestCase {
         boolean value = true;
 
         boolean actual = booleanOperations.notOperation(value);
-        Assert.assertEquals(false, actual);
+        Assertions.assertEquals(false, actual);
 
         value = false;
         actual = booleanOperations.notOperation(value);
-        Assert.assertEquals(true, actual);
+        Assertions.assertEquals(true, actual);
     }
 
     @Test

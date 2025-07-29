@@ -1,8 +1,8 @@
 package org.example.classes.interfaces;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class MessengerTest {
 
@@ -12,20 +12,20 @@ public class MessengerTest {
         Messenger messenger = new Telegram();
 
         String message = messenger.getMessage();
-        Assert.assertEquals("Get message from telegram", message);
+        Assertions.assertEquals("Get message from telegram", message);
 
-        Assert.assertTrue(messenger instanceof Telegram);
-        Assert.assertTrue(messenger instanceof Messenger);
+        Assertions.assertTrue(messenger instanceof Telegram);
+        Assertions.assertTrue(messenger instanceof Messenger);
 
-        Assert.assertFalse(messenger instanceof Viber);
-        Assert.assertFalse(messenger instanceof WhatsApp);
+        Assertions.assertFalse(messenger instanceof Viber);
+        Assertions.assertFalse(messenger instanceof WhatsApp);
 
-        Assert.assertEquals(1, messenger.YES);
+        Assertions.assertEquals(1, messenger.YES);
 
-        Assert.assertEquals("some error occurred", messenger.getErrorMessage());
+        Assertions.assertEquals("some error occurred", messenger.getErrorMessage());
 
         Messenger videoMessenger = new SomeVideoMessenger();
-        Assert.assertEquals("some error with video occurred", videoMessenger.getErrorMessage());
+        Assertions.assertEquals("some error with video occurred", videoMessenger.getErrorMessage());
     }
 
 }

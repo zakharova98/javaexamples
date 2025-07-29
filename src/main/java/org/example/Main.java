@@ -95,8 +95,7 @@ public class Main {
         //ioExamples.fileReaderTryWithResourcesExample();
         //ioExamples.fileWriterExample();
         //ioExamples.fileClassDemo();
-        ioExamples.serializableExampleDemo();
-
+        //ioExamples.serializableExampleDemo();
     }
 
 

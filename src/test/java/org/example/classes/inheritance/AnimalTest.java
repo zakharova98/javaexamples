@@ -1,7 +1,5 @@
 package org.example.classes.inheritance;
 
-import org.example.classes.Box;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 

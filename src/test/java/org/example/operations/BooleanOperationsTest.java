@@ -79,11 +79,11 @@ public class BooleanOperationsTest {
         boolean value = true;
 
         boolean actual = booleanOperations.notOperation(value);
-        Assertions.assertEquals(false, actual);
+        Assertions.assertFalse(actual);
 
         value = false;
         actual = booleanOperations.notOperation(value);
-        Assertions.assertEquals(true, actual);
+        Assertions.assertTrue(actual);
     }
 
     @Test

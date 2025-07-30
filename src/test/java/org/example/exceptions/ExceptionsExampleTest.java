@@ -20,21 +20,29 @@ public class ExceptionsExampleTest  {
         });
 
         System.out.println();
-        exceptionsExample.nestedCaughtException(5); // здесь не будет исключения
+        Assertions.assertDoesNotThrow(() -> {
+            exceptionsExample.nestedCaughtException(5);
+        });
     }
 
     @Test
-    public void testThrowExceptionExample() throws Exception {
+    // exceptionsExample.throwExceptionExample выбрасывает исключения на нечетные значения
+    public void testThrowExceptionExample() {
+
         Assertions.assertThrows(Exception.class, () -> {
             exceptionsExample.throwExceptionExample(201);
         });
 
-        exceptionsExample.throwExceptionExample(200); // здесь не будет исключения
+        Assertions.assertDoesNotThrow(() -> {
+            exceptionsExample.throwExceptionExample(200);
+        });
     }
 
     @Test
     public void testUncheckedExceptionExample() {
-        exceptionsExample.uncheckedExceptionExample(1);
+        Assertions.assertDoesNotThrow(() -> {
+            exceptionsExample.uncheckedExceptionExample(1);
+        });
 
         Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
             exceptionsExample.uncheckedExceptionExample(200);

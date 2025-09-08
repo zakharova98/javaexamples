@@ -31,4 +31,16 @@ public class AnimalTest {
 
     }
 
+    @Test
+    public void eatTest() {
+        Animal animal = new Animal();
+        animal.eat();
+
+        Dog dog = new Dog();
+        dog.eat();
+
+        Animal someDog = new Dog("gray", 5, 15, "Ollie", "Collie");
+        someDog.eat();
+    }
+
 }

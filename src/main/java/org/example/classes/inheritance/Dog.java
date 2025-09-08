@@ -36,6 +36,10 @@ public class Dog extends Animal {
 
     @Override
     public void eat() {
-        System.out.println("The dog eats meat");
+        if (this.name != null && !this.name.isEmpty()) {
+            System.out.println("The dog " + this.name + " eats meat");
+        } else {
+            System.out.println("The dog eats meat");
+        }
     }
 }

@@ -28,8 +28,5 @@ class ServiceTest {
         Assertions.assertTrue(t.isExist("Some request"));
         Assertions.assertTrue(t.isExist("Second request"));
         Assertions.assertTrue(t.isExist("Third request"));
-
-        Mockito.doNothing().when(databaseMock.isExist(Mockito.anyString()));
-
     }
 }

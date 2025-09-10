@@ -1,5 +1,7 @@
 package org.example.classes.inheritance;
 
+import org.example.exceptions.MyException;
+
 public class Animal {
 
     private String color;
@@ -41,5 +43,9 @@ public class Animal {
 
     public void eat() {
         System.out.println("This animal eats food.");
+    }
+
+    public void sleep() throws MyException {
+        System.out.println("This animal is sleeping zzzz");
     }
 }

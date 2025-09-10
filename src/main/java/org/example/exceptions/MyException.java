@@ -7,6 +7,9 @@ public class MyException extends Exception {
         this.detail = detail;
     }
 
+    public MyException() {
+    }
+
     @Override
     public String toString() {
         return "MyException [" +

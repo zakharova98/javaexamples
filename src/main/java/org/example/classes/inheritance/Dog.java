@@ -1,5 +1,7 @@
 package org.example.classes.inheritance;
 
+import org.example.exceptions.MyException;
+
 public class Dog extends Animal {
 
     private String name;
@@ -40,6 +42,16 @@ public class Dog extends Animal {
             System.out.println("The dog " + this.name + " eats meat");
         } else {
             System.out.println("The dog eats meat");
+        }
+    }
+
+    @Override
+    public void sleep() throws MyException{
+        if (this.breed == "Non sleeping dog") {
+            System.out.println("this dog doesn't sleep!");
+            throw new MyException();
+        } else {
+            System.out.println("this dog is sleeping zzzz");
         }
     }
 }

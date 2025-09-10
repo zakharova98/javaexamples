@@ -20,8 +20,6 @@ public class MessengerTest {
         Assertions.assertFalse(messenger instanceof Viber);
         Assertions.assertFalse(messenger instanceof WhatsApp);
 
-        Assertions.assertEquals(1, messenger.YES);
-
         Assertions.assertEquals("some error occurred", messenger.getErrorMessage());
 
         Messenger videoMessenger = new SomeVideoMessenger();

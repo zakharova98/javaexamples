@@ -1,0 +1,15 @@
+{
+  "firstName": "Ivan",
+  "lastName": "Ivanov",
+  "children" : null,
+  "married": true,
+  "age" : 27,
+  "address": {
+    "streetAddress": "First street, building 1, flat 1",
+    "city": "Nizhny Novgorod"
+  },
+  "phoneNumbers": [
+    "88005553535",
+    "89205476254"
+  ]
+}

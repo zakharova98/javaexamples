@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Person",
+  "description": "For personally information",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "description": "Person's first name",
+      "type": "string"
+    },
+    "lastName": {
+      "description": "Person's surname",
+      "type": "string"
+    },
+    "children": {
+      "description": "Person's children names",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "married" : {
+      "description": "Marital status",
+      "type": "boolean"
+    },
+    "age": {
+      "description": "Person's age",
+      "type": "integer"
+    },
+    "address": {
+      "description": "Person's home address",
+      "type": "object",
+      "properties": {
+        "streetAddress": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        }
+      }
+    },
+    "phoneNumbers": {
+      "description": "Person's phone numbers",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["firstName", "lastName", "age", "address"]
+}

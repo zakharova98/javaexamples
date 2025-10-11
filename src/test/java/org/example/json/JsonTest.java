@@ -3,6 +3,8 @@ package org.example.json;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.jayway.jsonpath.JsonPath;
 import com.networknt.schema.JsonSchema;
 import com.networknt.schema.JsonSchemaFactory;
@@ -134,7 +136,7 @@ public class JsonTest {
         Assertions.assertEquals("Ivan", person.getFirstName());
         Assertions.assertEquals("Ivanov", person.getLastName());
         Assertions.assertNull(person.getChildren());
-        Assertions.assertTrue(person.isMarried());
+        Assertions.assertFalse(person.isMarried());
         Assertions.assertEquals(27, person.getAge());
 
         Assertions.assertEquals("First street, building 1, flat 1", person.getAddress().getStreetAddress());
@@ -179,5 +181,38 @@ public class JsonTest {
             System.out.println("Error reading file: " + e.getMessage());
         }
         return text.toString();
+    }
+
+    @Test
+    public void gsonCreateTest() {
+        Address address = new Address("First street, building 1, flat 1", "Nizhny Novgorod");
+        List<String> phoneNumbers = new ArrayList<>() {{
+            add("88005553535");
+            add("89205476254");
+        }};
+        Person person = new Person("Ivan", "Ivanov", null, true, 27, address, phoneNumbers);
+
+        String personJson = new Gson().toJson(person);
+        System.out.println(personJson);
+    }
+
+    @Test
+    public void gsonParseTest() {
+        Gson gson = new GsonBuilder().setVersion(1.0).create();
+        //Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        Person person = gson.fromJson(getTextFromFile(personJsonFilePath), Person.class);
+
+        Assertions.assertEquals("Ivan", person.getFirstName());
+        Assertions.assertEquals("Ivanov", person.getLastName());
+
+        Assertions.assertNull(person.getChildren());
+        Assertions.assertTrue(person.isMarried());
+        Assertions.assertEquals(27, person.getAge());
+
+        Assertions.assertEquals("First street, building 1, flat 1", person.getAddress().getStreetAddress());
+        Assertions.assertEquals("Nizhny Novgorod", person.getAddress().getCity());
+
+        Assertions.assertEquals("88005553535", person.getPhone_numbers().get(0));
+        Assertions.assertEquals("89205476254", person.getPhone_numbers().get(1));
     }
 }

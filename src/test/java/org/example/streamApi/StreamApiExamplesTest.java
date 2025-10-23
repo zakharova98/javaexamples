@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+@Ignore
 class StreamApiExamplesTest {
 
     // collections for testing

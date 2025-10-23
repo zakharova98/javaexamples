@@ -7,5 +7,9 @@ cache:
 .verify:
   stage: test
   script:
-    - 'mvn verify'
+    - 'mvn $MAVEN_CLI_OPTS verify'
+
+verify:
+  extends:
+    - .verify
 

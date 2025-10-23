@@ -3,6 +3,7 @@ package org.example.streamApi;
 import org.example.classes.Box;
 import org.junit.Ignore;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -11,7 +12,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-@Ignore
 class StreamApiExamplesTest {
 
     // collections for testing
@@ -353,7 +353,7 @@ class StreamApiExamplesTest {
     }
 
     @Test
-    @Ignore
+    @Disabled
     public void parallelStreamTest() {
         AtomicInteger i = new AtomicInteger(0);
 
@@ -381,6 +381,7 @@ class StreamApiExamplesTest {
     }
 
     @Test
+    @Disabled
     public void parallelStreamArraysTest() {
         List<Integer> arrayListOfNumbers = new ArrayList<>();
         List<Integer> linkedListOfNumbers = new LinkedList<>();
@@ -416,6 +417,7 @@ class StreamApiExamplesTest {
     }
 
     @Test
+    @Disabled
     public void performanceTest() {
         List<Integer> arrayListOfNumbers = new ArrayList<>();
         IntStream.rangeClosed(1, 1_000_000).forEach(arrayListOfNumbers::add);

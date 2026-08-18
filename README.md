@@ -1,6 +1,6 @@
 # JavaExamples
 
-Проект с простыми примерами на Java
+Проект с простыми примерами на Java (скопировано с  https://gitlab.com/Zakharova/javaexamples)
 
 ## Пакеты
 - classes

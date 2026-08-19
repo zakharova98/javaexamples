@@ -30,12 +30,17 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${jar.plugin.version}</version>
                 <configuration>
-                    <includes>
+                    <!--<includes>
                         <include>**/properties/*</include>
-                    </includes>
+                    </includes>-->
                     <excludes>
                         <exclude>**/*.txt</exclude>
                     </excludes>
+					<archive>
+						<manifest>
+							<mainClass>org.example.Main</mainClass>
+						</manifest>
+					</archive>
                 </configuration>
             </plugin>
             <plugin>

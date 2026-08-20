@@ -10,6 +10,7 @@
 
 
 # for ci
+FROM eclipse-temurin:17-jre
 
 COPY target/*.jar app.jar
 

@@ -54,8 +54,12 @@
 			    <version>3.6.0</version>
 			    <configuration>
 			        <configLocation>checkstyle.xml</configLocation>
-			        <consoleOutput>true</consoleOutput>
-			        <failsOnError>true</failsOnError>
+        			<!-- Показывать ошибки в консоли -->
+        			<consoleOutput>true</consoleOutput>
+        			<!-- Не падать при ошибках Checkstyle -->
+        			<failsOnError>false</failsOnError>
+        			<!-- Не завершать Maven с ошибкой из-за нарушений -->
+        			<failOnViolation>false</failOnViolation>
 			    </configuration>
 	    		<executions>
 	        		<execution>

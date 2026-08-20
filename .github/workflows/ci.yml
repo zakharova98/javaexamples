@@ -82,6 +82,20 @@ jobs:
           name: java-application
           path: target
 
+      - name: Check files
+        run: |
+          echo "Current directory:"
+          pwd
+          
+          echo "Project files:"
+          ls -la
+
+          echo "Dockerfile:"
+          cat Dockerfile
+
+          echo "JAR:"
+          ls -la target/
+
       - name: Build Docker image
         run: |
           docker build \

@@ -32,7 +32,7 @@ jobs:
           cache: maven
 
       - name: Run Checkstyle
-        run: mvn checkstyle:check
+        run: mvn org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:check
 
 
   # =========================

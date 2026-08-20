@@ -10,7 +10,6 @@
 
 
 # for ci
-WORKDIR /app
 
 COPY target/*.jar app.jar
 
